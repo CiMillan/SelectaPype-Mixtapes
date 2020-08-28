@@ -1,0 +1,300 @@
+/***** BASE STYLES *****/
+
+
+#body {
+  font-family: 'Roboto', sans-serif;
+  color: #2b2b2b;
+}
+#work, #work-part-two, #contact {
+  /*height: 750px;*/
+}
+#work-part-two {
+  background-color: black;
+}
+
+
+/***** GRID *****/
+
+
+.full-width {
+  /*width: 1200px;*/
+  margin: 0 auto;
+}
+.half-width {
+  /*width: 600px;*/
+  /*margin: 0 auto;*/
+  /*float: left;*/
+  /*display: inline-block,*/
+}
+.third-width {
+  width: 400px;
+  max-width: 100%;
+  margin: 0 auto;
+  /*float: left;*/
+  display: inline-block;
+}
+
+
+/***** HEADER *****/
+
+
+header {
+  /*height: 750px;*/
+  background-color: black;
+  background-image: url('../img/lion72ppi.png');
+  background-repeat: no-repeat;
+  background-position: 40px 20px;
+  /* Note that you can combie the above but not background-size:
+  background: black url('../img/lion72ppi.png') no-repeat 40px 24px; */
+
+  background-size: 11%;
+  text-align: right;
+  padding-bottom: 15px;
+}
+header h2 {
+  /*width: auto;
+  clear: both;*/
+  color: #9b9b9b;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+
+  /*font-size: 56px;
+  line-height: 80px;
+  padding: 60px 0 20px 620px;*/
+  padding-right: 20px;
+  font-size: 40px;
+
+  width: calc(100% - 160px);
+  /* I am not clear why this seems to be necessary when the header has text-align: right. */
+  margin: 0 0 0 auto;
+}
+
+nav {
+  /*float: right;*/
+  /*padding: 86px 25px;*/
+  padding: 0 20px 0 0
+}
+nav ul li{
+  display: inline-block;
+}
+nav ul li a {
+  text-transform: none;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  padding-left: 8px;
+}
+
+@media all and (min-width: 768px) {
+}
+@media all and (min-width: 990px) {
+  header  {
+    background-size: cover;
+  }
+  header h2 {
+    font-size: 56px;
+    line-height: 80px;
+    padding: 60px 0 20px 620px;
+  }
+}
+
+
+
+/* unvisited link */
+a:link {
+  color: yellow;
+}
+/* visited link */
+a:visited {
+  color: green;
+}
+/* mouse over link */
+a:hover {
+  color: red;
+}
+/* selected link */
+a:active {
+  color: yellow;
+}
+
+img {
+  max-width: 100%;
+}
+
+/***** MIXTAPES *****/
+
+
+#work {
+  background-color: #ffff00;
+  text-align: center;
+}
+#work .full-width {
+  padding: 115px 0;
+}
+#work img {
+  border: 12px solid #00ff00;
+  margin-bottom: 50px;
+}
+#work h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  /*width: 400px;*/
+  margin-top: 40px;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+audio {
+  width: 350px;
+  background: #F3F3F3;
+}
+audio:hover, audio:focus, audio:active
+{
+  -webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+  -moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+  box-shadow: 15px 15px 20px rgba(255,0, 0, 0.4);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  transform: scale(1.05);
+}
+audio
+{
+  -webkit-transition:all 0.5s linear;
+  -moz-transition:all 0.5s linear;
+  -o-transition:all 0.5s linear;
+  transition:all 0.5s linear;
+  -moz-box-shadow: 2px 2px 4px 0px #006773;
+  -webkit-box-shadow:  2px 2px 4px 0px #006773;
+  box-shadow: 2px 2px 4px 0px #006773;
+  -moz-border-radius:7px 7px 7px 7px ;
+  -webkit-border-radius:7px 7px 7px 7px ;
+  border-radius:7px 7px 7px 7px ;
+}
+
+
+/***** CONTACT *****/
+
+
+/*#contact*/
+footer {
+  background-color: #9b9b9b;
+  text-align: center;
+}
+/*#contact*/
+footer .full-width {
+  padding: 170px 0;
+
+}
+
+form {
+    /* Apenas para centralizar o form na página */
+    margin: 0 auto;
+    width: 400px;
+    /* Para ver as bordas do formulário */
+    padding: 82px;
+    border: 10px solid #000000;
+    border-style: dotted;
+    border-radius: 1px;
+}
+form div + div {
+    margin-top: 20px;
+}
+label {
+    /*Para ter certeza que todas as labels tem o mesmo tamanho e estão propriamente alinhadas */
+    display: inline-block;
+    width: 90px;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+input, textarea {
+    /* Para certificar-se que todos os campos de texto têm as mesmas configurações de fonte. Por padrão, textareas ter uma fonte monospace*/
+    font: 1em sans-serif;
+
+    /* Para dar o mesmo tamanho a todos os campo de texto */
+    width: 300px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    /* Para harmonizar o look & feel das bordas nos campos de texto*/
+    border: 2px solid #2f2f2f;
+}
+input:focus, textarea:focus {
+    /* Dar um pouco de destaque nos elementos ativos */
+    border-color: #ff0000;
+}
+textarea {
+    /* Para alinhar corretamente os campos de texto de várias linhas com sua label*/
+    vertical-align: top;
+
+    /* Para dar espaço suficiente para digitar algum texto */
+    height: 5em;
+
+    /* Para permitir aos usuários redimensionarem qualquer textarea verticalmente. Ele não funciona em todos os browsers */
+    resize: vertical;
+}
+button {
+    /* Para posicionar os botões para a mesma posição dos campos de texto */
+    background-color: #000000;
+    border: 2px solid #FFFFFF;
+    color: white;
+    padding: 4px 14px;
+    margin-left: 344px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 28px;
+    opacity: 0.6;
+}
+button:hover {opacity: 1}
+
+
+
+
+#contact h2, #contact #email-header, #contact #socialmedia-header, #contact ul {
+  padding-left: 115px;
+}
+#contact h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  line-height: 42px;
+  margin-top: 82px;
+}
+#contact #email-header{
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  font-weight: lighter;
+  line-height: 44px;
+  padding-left: 302px;
+  margin: -24px 0 5px 0;
+}
+#contact #socialmedia-header {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  font-weight: lighter;
+  line-height: 44px;
+  margin: 48px 0 0 0;
+}
+#contact a {
+  text-decoration: none;
+  color: #C49075;
+  font-weight: bolder;
+  font-size: 28px;
+}
+#contact ul {
+  list-style: none;
+  margin-left: 190px;
+  opacity: 1;
+}
+#contact li:hover {opacity: 1}
+
+#contact ul li {
+  display: inline-block;
+  opacity: 0.6;
+}
+#contact ul img {
+  font-size: 32px;
+  margin-left: 30px;
+  border: 2px solid #FFFFFF;
+}
